@@ -1,4 +1,4 @@
-Documentation readme file (Vanessa Leung s8092474)
+Documentation readme file (Kenneth Pinto s8166982)
 
 -Overview-
 
