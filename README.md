@@ -53,7 +53,7 @@ ___
         }
         
         .parallax {
-            background-image: url('https://www.discoverhongkong.com/content/dam/dhk/intl/explore/attractions/the-charm-of-the-bright-city/the-charm-of-the-bright-city-1920x1080.jpg');
+            background-image: url('https://mediaoffice.ae/-/media/group/the-gdmo/the-emirate-of-dubai/emirate-of-dubai-banner/dubai_shutterstock_697481659/dubaipage/dubai22/shutterstock_413449069/test12/final111.jpg)');
             min-height: 500px;
             background-attachment: fixed;
             background-position: center;
