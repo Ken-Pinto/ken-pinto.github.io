@@ -1,195 +1,29 @@
-# h1 heading
-## h2 heading
-### h3 heading
-#### h4 heading
-##### h5 heading
-###### h6 heading
+Documentation readme file (Vanessa Leung s8092474)
 
+-Overview-
 
-## Horizontal Rules
+Hello, this is Vanessa from Hong Kong. I am so happy to be here to introduce you to my hometown. Hong Kong is such a beautiful city with the ranking #1 in over 8,000 travellers in 2023 (Nath, K. 2023). Last year, there are 34 million international visitor arrivals in Hong Kong (Agne Blazyte 2024). So I would like to share some ideas on how to promote travel to Hong Kong.
 
-___
+-Innovative designs-
 
+My website contains some information, pictures, a video and useful links. The pictures are alternated to create a dynamic flow and maintain visual interest, and also show the features of Hong Kong, the video can let the users have a quick look at the trip to Hong Kong in an interesting way with not just words. Users can check flight tickets, weather and exchange rate by clicking on my links. And there is an emoji in each subtitle to make the website look cuter.
 
-## Emphasis
+-Accessible designs (website)-
 
-**This is bold text**
+Used black words and white background to have a high contrast
+United the fonts size of headings and paragraphs
+Embedded a Youtube video and can be played without leaving the website
+Embedded some links for additional information
+-Accessible designs (HTML/CSS)-
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Hong Kong</title>
-    <style>
-        .flex-container {
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: left; 
-        }
+Language attribution: Added " html lang=”en” " to indicate the language of the content, so that screen readers and the search engines can understand which language is being used.
+Meta tags: Added" meta charset=”UTF-8” " to indicate the character encoding of the web page.
+Semantic HTML: Used" main, section, footer", etc. to make the structure easier to search and understand, thus improving accessibility.
+The alt description of images: Added the alt descriptions for the accessibility and for some users who can’t see the images.
+Video-container: To ensure that the embedded video maintains its aspect ratio and adjusts to fit the width of the screen.
+Link description: To improve the accessibility of text links, users can understand what information the link provides before they click on it.
+Reference list:
 
-        .text-image-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
+Nath, K. (2023). Hong Kong ranks #1 in APAC Travel confidence. [online] Brand TD. Available at: https://www.traveldailymedia.com/hong-kong-ranks-1-in-apac-travel-confidence/ [Accessed 25 Mar. 2024].
 
-        .image-container img {
-            max-width: 600px;
-            height: auto;
-            display: block;
-        }
-
-        .text-container {
-            max-width: 100%;
-        }
-
-        @keyframes grow {
-            0% { background-size: 100%; }
-            50% { background-size: 110%; }
-            100% { background-size: 100%; }
-        }
-        
-        .parallax {
-            background-image: url('https://mediaoffice.ae/-/media/group/the-gdmo/the-emirate-of-dubai/emirate-of-dubai-banner/dubai_shutterstock_697481659/dubaipage/dubai22/shutterstock_413449069/test12/final111.jpg');
-            min-height: 500px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .content {
-            padding: 50px;
-            width: 80%;
-            color: black;
-         
-        }
-
-        h1 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            text-align: center;
-            font-size: 35px;
-        }
-
-        p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-          
-        }
-
-        h2 {
-            border-bottom: 2pt solid rgb(0, 0, 0);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 30px;
-            
-        }
-
-        footer {
-            text-align: center;
-            background-color: #c6f4ffc5;
-            padding: 10px;
-            position: relative;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div class="parallax" aria-hidden="true"></div>
-
-    <main class="content">
-        <h1>Welcome to Dubai</h1>
-
-        <section>
-            <h2>About Dubai</h2>
-            <p>Where is Hong Kong? Hong Kong is located on the southern coast of China and includes Hong Kong Island, Lantau Island, the Kowloon Peninsula, and the New Territories.</p>
-            <p>Have you ever been to Hong Kong? Hong Kong is an amazing city, and beyond shopping and dining, there is so much to explore. Bustling markets, historic temples, tranquil walking trails, and the most breathtaking views of Victoria Harbour. Travellers can have an unforgettable trip in Hong Kong. Come on, let me show you how to enjoy traveling in Hong Kong!</p>
-        </section>
-
-        <section>
-            <h2>Explore Dubai</h2>
-            <div class="text-image-container">
-                <div class="image-container">
-                    <img src="https://www.journeyera.com/wp-content/uploads/2019/12/dragons-back-hike-hong-kong-0430.jpg" alt="Dragon's Back hiking trail">
-                </div>
-                <div class="text-container">
-                    <p>Nature and hiking&#128507;:</p>
-                    <p>Hong Kong is famous for its beautiful natural scenery. Dragon's Back, Thousand Island Lake, and Tai Mo Shan are some of my favorite hiking trails. Not only are they beautiful and relaxing, but they are also conveniently located within 30 minutes by public transport.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="flex-container"> 
-                <div class="text-container">
-                    <p>Theme parks&#127906;:</p>
-                    <p>If you are looking for something fun and exciting to do with your children, theme parks such as Disneyland and Ocean Park would be a good choice, each offering a unique mix of entertainment and attractions.</p>
-               
-                </div>
-                <div class="image-container">
-                    <img src="https://media.oceanpark.com.hk/files/s3fs-public/flySwimg.jpg" alt="Ocean Park">
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="text-image-container">
-                <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1623747912232-a5ba7a3db7de?q=80&w=3240&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Street food" >
-                </div>
-                <div class="text-container">
-                    <p>Local street food&#127841;:</p>
-                    <p>Don't just go to fine dining restaurants. You have to try the most typical street food like egg waffles, fish balls, and bubble tea!</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="flex-container"> 
-                <div class="text-container">
-                    <p>The night view&#127753;:</p>
-                    <p>To enjoy Hong Kong's iconic night view, Victoria Harbour and the Peak are good places to go. A stroll along the harbour with its most famous landmark and a dinner on the Peak with the city at night will make your trip unforgettable.</p>
-                </div>
-                <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1577871598838-a543ee47cd79?q=80&w=3866&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Night view of Hong Kong">
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Have a flash visit with Henry Golding now&#128747;</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/watch?v=9Ey5vCCPo08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section>
-            <h2>Additional Information</h2>
-            <p><a href="https://www.accuweather.com/en/hk/hong-kong/1123655/weather-today/1123655">Check out the weather in HK</a></p>
-            <p><a href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=AUD&To=HKD">Check the exchange rate</a></p>
-            <p><a href="https://au.trip.com/">Check the flights</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Kenneth Pinto s8166982</p>
-        <p>Contact me <a href="https://www.linkedin.com/in/ken-pinto/">here</a>.</p>
-    </footer>
-</body>
-</html>
+Agne Blazyte (2024). Number of visitor arrivals Hong Kong 2013-2023.
