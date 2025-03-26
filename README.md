@@ -114,16 +114,16 @@ ___
     <div class="parallax" aria-hidden="true"></div>
 
     <main class="content">
-        <h1>Welcome to Hong Kong</h1>
+        <h1>Welcome to Dubai</h1>
 
         <section>
-            <h2>About Hong Kong</h2>
+            <h2>About Dubai</h2>
             <p>Where is Hong Kong? Hong Kong is located on the southern coast of China and includes Hong Kong Island, Lantau Island, the Kowloon Peninsula, and the New Territories.</p>
             <p>Have you ever been to Hong Kong? Hong Kong is an amazing city, and beyond shopping and dining, there is so much to explore. Bustling markets, historic temples, tranquil walking trails, and the most breathtaking views of Victoria Harbour. Travellers can have an unforgettable trip in Hong Kong. Come on, let me show you how to enjoy traveling in Hong Kong!</p>
         </section>
 
         <section>
-            <h2>Explore Hong Kong</h2>
+            <h2>Explore Dubai</h2>
             <div class="text-image-container">
                 <div class="image-container">
                     <img src="https://www.journeyera.com/wp-content/uploads/2019/12/dragons-back-hike-hong-kong-0430.jpg" alt="Dragon's Back hiking trail">
@@ -175,7 +175,7 @@ ___
         <section>
             <h2>Have a flash visit with Henry Golding now&#128747;</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/1lcjRj3rWnQ?si=iNQa-5N6Kzqea-NZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/watch?v=9Ey5vCCPo08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
 
