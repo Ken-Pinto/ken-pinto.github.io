@@ -188,8 +188,8 @@ ___
     </main>
 
     <footer>
-        <p>&copy; 2024 Vanessa Leung s8092474</p>
-        <p>Contact me <a href="https://www.linkedin.com/in/vanessa-leung-288198188/">here</a>.</p>
+        <p>&copy; 2025 Kenneth Pinto s8166982</p>
+        <p>Contact me <a href="https://www.linkedin.com/in/ken-pinto/">here</a>.</p>
     </footer>
 </body>
 </html>
