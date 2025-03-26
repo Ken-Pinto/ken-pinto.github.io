@@ -9,14 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: white;
             text-align: center;
+            color: black;
         }
         header {
-            background: #0077b6;
-            color: white;
+            background: white;
+            color: black;
             padding: 20px;
             font-size: 24px;
+            border-bottom: 2px solid #0077b6;
         }
         section {
             padding: 20px;
@@ -27,12 +29,13 @@
             border-radius: 10px;
         }
         footer {
-            background: #0077b6;
-            color: white;
+            background: white;
+            color: black;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
+            border-top: 2px solid #0077b6;
         }
     </style>
 </head>
