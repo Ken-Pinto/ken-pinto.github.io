@@ -53,6 +53,7 @@
             padding: 5px 10px;
             border-radius: 20px;
             width: 250px;
+            margin-right: 10px; /* Slight margin to move it right */
         }
         .search-bar input {
             background: transparent;
@@ -66,6 +67,10 @@
         }
         .search-bar input::placeholder {
             color: #ccc;
+        }
+        .search-bar i {
+            color: #fff;
+            margin-right: 10px;
         }
         .container, .section {
             width: 80%; /* Ensure boxes are same length as navbar */
@@ -127,12 +132,17 @@
         html {
             scroll-behavior: smooth;
         }
+        .highlight {
+            background-color: #ffea00; /* Highlighted text color */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Logo"> <!-- Apple logo as logo -->
         <div class="search-bar">
+            <i class="fas fa-search"></i> <!-- Magnifying glass icon -->
             <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
         </div>
     </div>
@@ -176,9 +186,17 @@
                 let textContent = section.textContent || section.innerText;
                 if (textContent.toLowerCase().includes(searchInput)) {
                     section.style.display = '';
+                    highlightText(section, searchInput);
                 } else {
                     section.style.display = 'none';
                 }
+            });
+        }
+
+        function highlightText(element, searchInput) {
+            const regex = new RegExp(searchInput, 'gi');
+            element.innerHTML = element.innerHTML.replace(regex, (match) => {
+                return `<span class="highlight">${match}</span>`;
             });
         }
     </script>
