@@ -23,13 +23,13 @@
             left: 50%;
             transform: translateX(-50%);
             background: #333; /* Solid dark background */
-            padding: 10px 30px; /* Thinner navbar */
+            padding: 5px 40px; /* Thinner navbar with more horizontal padding */
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 30px;
             font-size: 16px;
-            border-radius: 25px;
+            border-radius: 50px; /* Fully rounded edges */
             width: 80%; /* Make navbar a bit shorter in width */
         }
         .navbar a {
@@ -45,107 +45,4 @@
             width: 40px; /* Small logo size */
             height: 40px;
             border-radius: 50%;
-            object-fit: cover;
-        }
-        .container, .section {
-            width: 80%; /* Ensure boxes are same length as navbar */
-            max-width: 900px;
-            background: #222; /* Dark background for content */
-            padding: 30px;
-            margin-top: 100px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #ccc;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 28px;
-            color: #fff;
-        }
-        h2 {
-            font-size: 18px;
-            color: #fff;
-            margin-top: 10px;
-        }
-        .content {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            width: 100%;
-        }
-        .profile-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .description {
-            flex: 2;
-            padding-left: 20px;
-        }
-        p {
-            font-size: 16px;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        .section h3 {
-            color: #ccc;
-        }
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <img src="https://via.placeholder.com/40" alt="Logo"> <!-- Temporary logo image -->
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <div class="container" id="about">
-        <div class="header">
-            <h1>Kenneth Pinto</h1>
-            <h2>Master of Digital Media Student</h2>
-        </div>
-        <div class="content">
-            <div class="profile-image">
-                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto"> <!-- Temporary image for profile -->
-            </div>
-            <div class="description">
-                <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section" id="projects">
-        <h3>Projects</h3>
-        <p>Here are some of my recent projects. Stay tuned for updates!</p>
-    </div>
-    
-    <div class="section" id="skills">
-        <h3>Skills</h3>
-        <p>Proficient in digital media production, web design, and content creation.</p>
-    </div>
-    
-    <div class="section" id="contact">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #ccc; text-decoration: none;">kenneth.pinto@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/kennethpinto" style="color: #ccc; text-decoration: none;">linkedin.com/in/kennethpinto</a></p>
-    </div>
-</body>
-</html>
+            object
