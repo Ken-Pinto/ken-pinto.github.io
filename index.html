@@ -128,4 +128,74 @@
             scroll-behavior: smooth;
         }
         .highlight {
-            background-color: #39FF14
+            background-color: #39FF14; /* Highlighted text in accent color */
+            font-weight: bold;
+            color: #000; /* Text color for highlight */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"> <!-- Make the logo clickable and link to homepage -->
+            <img src="https://via.placeholder.com/160" alt="Logo"> <!-- Replace with actual LinkedIn profile image URL -->
+        </a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+        </div>
+    </div>
+
+    <div class="container" id="about">
+        <div class="header">
+            <h1>Kenneth Pinto</h1>
+            <h2>Master of Digital Media Student</h2>
+        </div>
+        <div class="content">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto"> <!-- Replace with your actual profile image URL -->
+            </div>
+            <div class="description">
+                <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="projects">
+        <h3>Projects</h3>
+        <p>Here are some of my recent projects. Stay tuned for updates!</p>
+    </div>
+    
+    <div class="section" id="skills">
+        <h3>Skills</h3>
+        <p>Proficient in digital media production, web design, and content creation.</p>
+    </div>
+    
+    <div class="section" id="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #ccc; text-decoration: none;">kenneth.pinto@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ken-pinto" style="color: #ccc; text-decoration: none;">linkedin.com/in/ken-pinto</a></p>
+    </div>
+
+    <script>
+        function searchFunction() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                let textContent = section.textContent || section.innerText;
+                if (textContent.toLowerCase().includes(searchInput)) {
+                    section.style.display = '';
+                    highlightText(section, searchInput);
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function highlightText(element, searchInput) {
+            const regex = new RegExp(searchInput, 'gi');
+            element.innerHTML = element.innerHTML.replace(regex, (match) => {
+                return `<span class="highlight">${match}</span>`;
+            });
+        }
+    </script>
+</body>
+</html>
