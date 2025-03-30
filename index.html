@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Pinto - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Neue Haas Grotesk font -->
-    <link rel="icon" href="https://randomuser.me/api/portraits/men/1.jpg" type="image/jpeg"> <!-- Random profile image as favicon -->
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- AI Robot Image as Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Neue Haas Grotesk', sans-serif;
@@ -31,12 +31,6 @@
             width: 70%;
             border-radius: 50px;
         }
-        .navbar img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
         .navbar a {
             text-decoration: none;
             color: #39FF14;
@@ -46,26 +40,40 @@
         .navbar a:hover {
             color: #fff;
         }
+        .navbar img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
         .search-bar {
-            width: 30%;
-            height: 20px;
-            background-color: #444;
-            border-radius: 10px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            padding: 0 10px;
+            background-color: #444;
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
         }
         .search-bar input {
             background: transparent;
             border: none;
             color: #fff;
-            width: 100%;
             padding: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
             outline: none;
             font-size: 14px;
+            text-align: center;
         }
-        .container, .section {
+        .search-bar i {
+            color: #39FF14;
+            font-size: 18px;
+        }
+        .container {
             width: 70%;
             max-width: 900px;
             background: #222;
@@ -82,11 +90,14 @@
             text-align: center;
             margin-bottom: 40px;
         }
-        h1 {
+        .header h1, .header h2 {
+            margin: 0;
+        }
+        .header h1 {
             font-size: 28px;
             color: #fff;
         }
-        h2 {
+        .header h2 {
             font-size: 18px;
             color: #fff;
             margin-top: 10px;
@@ -103,7 +114,7 @@
             justify-content: center;
             align-items: center;
         }
-        img {
+        .profile-image img {
             width: 160px;
             height: 160px;
             border-radius: 50%;
@@ -124,49 +135,80 @@
         html {
             scroll-behavior: smooth;
         }
+        .highlight {
+            background-color: #39FF14;
+            font-weight: bold;
+            color: #000;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="/"><img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Logo"> </a> <!-- Random profile image as logo -->
+        <img src="https://via.placeholder.com/30" alt="Profile Logo"> <!-- Random Profile Image -->
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i> <!-- Search Icon -->
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
         </div>
     </div>
 
+    <!-- Kenneth Pinto and Master of Digital Media outside the content box -->
+    <div class="header">
+        <h1>Kenneth Pinto</h1>
+        <h2>Master of Digital Media Student</h2>
+    </div>
+
+    <!-- About Section -->
     <div class="container" id="about">
-        <div class="header">
-            <h1>Kenneth Pinto</h1>
-            <h2>Master of Digital Media Student</h2>
-        </div>
         <div class="content">
             <div class="profile-image">
-                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Kenneth Pinto"> <!-- Random profile image -->
+                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto"> <!-- Temporary image for profile -->
             </div>
             <div class="description">
                 <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
             </div>
         </div>
     </div>
-    
+
     <div class="section" id="projects">
         <h3>Projects</h3>
         <p>Here are some of my recent projects. Stay tuned for updates!</p>
     </div>
-    
+
     <div class="section" id="skills">
         <h3>Skills</h3>
         <p>Proficient in digital media production, web design, and content creation.</p>
     </div>
-    
+
     <div class="section" id="contact">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #ccc; text-decoration: none;">kenneth.pinto@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ken-pinto/" style="color: #ccc; text-decoration: none;">linkedin.com/in/ken-pinto</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kennethpinto" style="color: #ccc; text-decoration: none;">linkedin.com/in/kennethpinto</a></p>
     </div>
 
     <script>
-        // You can add search functionality if needed.
+        function searchFunction() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                let textContent = section.textContent || section.innerText;
+                if (textContent.toLowerCase().includes(searchInput)) {
+                    section.style.display = '';
+                    highlightText(section, searchInput);
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function highlightText(element, searchInput) {
+            const regex = new RegExp(searchInput, 'gi');
+            element.innerHTML = element.innerHTML.replace(regex, (match) => {
+                return `<span class="highlight">${match}</span>`;
+            });
+        }
     </script>
+
 </body>
 </html>
