@@ -24,14 +24,12 @@
             left: 50%;
             transform: translateX(-50%);
             background: #333; /* Solid dark background */
-            padding: 5px 20px; /* Even thinner navbar */
+            padding: 5px 20px; /* Thinner navbar */
             display: flex;
-            justify-content: center; /* Center the navbar links */
+            justify-content: space-between; /* Space between logo and search bar */
             align-items: center;
-            gap: 30px;
-            font-size: 16px;
-            border-radius: 50px; /* Fully rounded edges */
             width: 80%; /* Make navbar a bit shorter in width */
+            border-radius: 50px; /* Fully rounded edges */
         }
         .navbar a {
             text-decoration: none;
@@ -47,6 +45,27 @@
             height: 40px;
             border-radius: 50%;
             object-fit: cover;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #444;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: 250px;
+        }
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 5px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-bar input::placeholder {
+            color: #ccc;
         }
         .container, .section {
             width: 80%; /* Ensure boxes are same length as navbar */
@@ -113,9 +132,9 @@
 <body>
     <div class="navbar">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Logo"> <!-- Apple logo as logo -->
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+        </div>
     </div>
 
     <div class="container" id="about">
@@ -148,5 +167,20 @@
         <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #ccc; text-decoration: none;">kenneth.pinto@example.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/kennethpinto" style="color: #ccc; text-decoration: none;">linkedin.com/in/kennethpinto</a></p>
     </div>
+
+    <script>
+        function searchFunction() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                let textContent = section.textContent || section.innerText;
+                if (textContent.toLowerCase().includes(searchInput)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
