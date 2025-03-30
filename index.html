@@ -49,10 +49,12 @@
         .search-bar {
             width: 30%; /* Shortened search bar width */
             background-color: #444;
-            padding: 10px;
-            border-radius: 20px; /* Rounded edges for search bar */
+            padding: 5px 10px;
+            border-radius: 50px; /* Rounded corners for search bar */
             display: flex;
             align-items: center;
+            height: 35px; /* Shortened height of search bar */
+            box-shadow: 0 0 10px rgba(0, 255, 20, 0.4); /* Smooth shadow for depth */
         }
         .search-bar input {
             background: transparent;
@@ -62,6 +64,11 @@
             width: 100%;
             font-size: 16px;
             outline: none;
+            border-radius: 50px; /* Ensure the input field has smooth corners */
+            transition: all 0.3s ease; /* Smooth transition on focus */
+        }
+        .search-bar input:focus {
+            box-shadow: 0 0 15px rgba(0, 255, 20, 0.6); /* Highlight input on focus */
         }
         .container, .section {
             width: 70%; /* Ensure boxes are same length as navbar */
