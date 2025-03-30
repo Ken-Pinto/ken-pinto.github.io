@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Pinto - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Neue Haas Grotesk font -->
-    <link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpub%2Fdir%2FKenneth%2FPinto&psig=AOvVaw25c9mWlWhEHs9uHJjcqbC7&ust=1743436994432000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiJlYuXsowDFQAAAAAdAAAAABAE" type="image/png"> <!-- Replace with actual LinkedIn profile image URL -->
+    <link rel="icon" href="path/to/your/profile-icon.png" type="image/png"> <!-- Profile image as favicon -->
     <style>
         body {
-            font-family: 'Neue Haas Grotesk', sans-serif; /* New font */
+            font-family: 'Neue Haas Grotesk', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            background: #000; /* Black background */
+            background: #000;
             color: #fff;
         }
         .navbar {
@@ -23,54 +23,52 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: #333; /* Dark background for navbar */
-            padding: 5px 20px; /* Thinner navbar (smaller height) */
+            background: #333;
+            padding: 5px 10px;
             display: flex;
-            justify-content: space-between; /* Space between logo and search bar */
+            justify-content: space-between;
             align-items: center;
-            width: 70%; /* Same width as the content box */
-            border-radius: 50px; /* Fully rounded edges */
-        }
-        .navbar a {
-            text-decoration: none;
-            color: #fff; /* Accent color */
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .navbar a:hover {
-            color: #fff; /* Hover effect for links */
+            width: 70%;
+            border-radius: 50px;
         }
         .navbar img {
-            width: 30px; /* Reduced logo size */
+            width: 30px;
             height: 30px;
             border-radius: 50%;
             object-fit: cover;
         }
+        .navbar a {
+            text-decoration: none;
+            color: #39FF14;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #fff;
+        }
         .search-bar {
-            width: 30%; /* Shortened search bar width */
+            width: 30%;
+            height: 20px;
             background-color: #444;
-            padding: 5px 10px;
-            border-radius: 50px; /* Rounded corners for search bar */
+            border-radius: 10px;
             display: flex;
             align-items: center;
-            height: 20px; /* Shortened height of search bar */
-            box-shadow: none; /* Removed the green accent shadow */
-            margin-left: auto; /* Pushed search bar to the far right */
+            justify-content: space-between;
+            padding: 0 10px;
         }
         .search-bar input {
             background: transparent;
             border: none;
             color: #fff;
-            padding: 3px 10px;
             width: 100%;
-            font-size: 14px;
+            padding: 5px;
             outline: none;
-            border-radius: 50px; /* Ensure the input field has smooth corners */
+            font-size: 14px;
         }
         .container, .section {
-            width: 70%; /* Ensure boxes are same length as navbar */
+            width: 70%;
             max-width: 900px;
-            background: #222; /* Dark background for content */
+            background: #222;
             padding: 30px;
             margin-top: 100px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -121,26 +119,18 @@
             line-height: 1.6;
         }
         .section h3 {
-            color: #39FF14; /* Accent color for headings */
+            color: #39FF14;
         }
-        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
-        }
-        .highlight {
-            background-color: #39FF14; /* Highlighted text in accent color */
-            font-weight: bold;
-            color: #000; /* Text color for highlight */
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="/"> <!-- Make the logo clickable and link to homepage -->
-            <img src="https://via.placeholder.com/160" alt="Logo"> <!-- Replace with actual LinkedIn profile image URL -->
-        </a>
+        <a href="/"><img src="path/to/your/profile-icon.png" alt="Logo"> </a> <!-- Profile image as logo -->
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+            <input type="text" placeholder="Search...">
         </div>
     </div>
 
@@ -151,7 +141,7 @@
         </div>
         <div class="content">
             <div class="profile-image">
-                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto"> <!-- Replace with your actual profile image URL -->
+                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto">
             </div>
             <div class="description">
                 <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
@@ -172,30 +162,11 @@
     <div class="section" id="contact">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #ccc; text-decoration: none;">kenneth.pinto@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/ken-pinto" style="color: #ccc; text-decoration: none;">linkedin.com/in/ken-pinto</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ken-pinto/" style="color: #ccc; text-decoration: none;">linkedin.com/in/ken-pinto</a></p>
     </div>
 
     <script>
-        function searchFunction() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                let textContent = section.textContent || section.innerText;
-                if (textContent.toLowerCase().includes(searchInput)) {
-                    section.style.display = '';
-                    highlightText(section, searchInput);
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-
-        function highlightText(element, searchInput) {
-            const regex = new RegExp(searchInput, 'gi');
-            element.innerHTML = element.innerHTML.replace(regex, (match) => {
-                return `<span class="highlight">${match}</span>`;
-            });
-        }
+        // You can add search functionality if needed.
     </script>
 </body>
 </html>
