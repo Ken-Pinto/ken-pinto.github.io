@@ -28,7 +28,7 @@
             display: flex;
             justify-content: space-between; /* Space between logo and search bar */
             align-items: center;
-            width: 70%; /* Make navbar shorter in width */
+            width: 70%; /* Same width as the content box */
             border-radius: 50px; /* Fully rounded edges */
         }
         .navbar a {
@@ -48,29 +48,30 @@
         }
         .search-bar {
             display: flex;
+            justify-content: center;
             align-items: center;
             background-color: #444;
-            padding: 5px 8px;
-            border-radius: 20px;
-            width: 200px;
-            margin-right: 10px; /* Slight margin to move it right */
+            padding: 10px;
+            border-radius: 50%; /* Circle shape */
+            width: 40px;
+            height: 40px;
+            margin-right: 10px; /* Gap between search bar and edge of navbar */
         }
         .search-bar input {
             background: transparent;
             border: none;
             color: #fff;
             padding: 5px;
-            width: 100%;
-            border-radius: 10px;
-            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
             outline: none;
-        }
-        .search-bar input::placeholder {
-            color: #ccc;
+            font-size: 14px;
+            text-align: center;
         }
         .search-bar i {
             color: #39FF14; /* Accent color for search icon */
-            margin-right: 8px;
+            font-size: 18px;
         }
         .container, .section {
             width: 70%; /* Ensure boxes are same length as navbar */
@@ -136,6 +137,72 @@
             background-color: #39FF14; /* Highlighted text in accent color */
             font-weight: bold;
             color: #000; /* Text color for highlight */
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .navbar {
+                width: 90%; /* Make navbar width responsive */
+                padding: 5px 15px;
+            }
+            .navbar img {
+                width: 25px; /* Smaller logo size */
+                height: 25px;
+            }
+            .search-bar {
+                width: 35px;
+                height: 35px;
+                margin-right: 8px; /* Smaller gap for mobile */
+            }
+            .search-bar input {
+                width: 25px;
+                height: 25px;
+            }
+            .container, .section {
+                width: 90%; /* Adjust content box width */
+                padding: 20px; /* Smaller padding for mobile */
+            }
+            h1 {
+                font-size: 24px; /* Smaller heading for mobile */
+            }
+            h2 {
+                font-size: 16px; /* Smaller subheading for mobile */
+            }
+            p {
+                font-size: 14px; /* Smaller text for mobile */
+            }
+        }
+
+        /* Very Small Mobile Optimizations */
+        @media (max-width: 480px) {
+            .navbar {
+                width: 100%; /* Navbar spans the whole screen on very small devices */
+            }
+            .navbar img {
+                width: 20px; /* Even smaller logo size */
+                height: 20px;
+            }
+            .search-bar {
+                width: 30px;
+                height: 30px;
+            }
+            .search-bar input {
+                width: 20px;
+                height: 20px;
+            }
+            .container, .section {
+                width: 100%; /* Full width for small devices */
+                padding: 15px; /* Less padding on small devices */
+            }
+            h1 {
+                font-size: 20px; /* Even smaller heading for very small screens */
+            }
+            h2 {
+                font-size: 14px; /* Smaller subheading for very small screens */
+            }
+            p {
+                font-size: 12px; /* Smaller text for very small screens */
+            }
         }
     </style>
 </head>
