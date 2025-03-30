@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Pinto - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Neue Haas Grotesk font -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Neue Haas Grotesk', sans-serif; /* New font */
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,14 +22,15 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+            background: #333; /* Solid dark background */
             padding: 10px 30px; /* Thinner navbar */
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
             gap: 30px;
             font-size: 16px;
             border-radius: 25px;
-            width: 80%; /* Make the navbar a bit shorter in width */
+            width: 80%; /* Make navbar a bit shorter in width */
         }
         .navbar a {
             text-decoration: none;
@@ -39,7 +41,14 @@
         .navbar a:hover {
             color: #ccc;
         }
-        .container {
+        .navbar img {
+            width: 40px; /* Small logo size */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .container, .section {
+            width: 80%; /* Ensure boxes are same length as navbar */
             max-width: 900px;
             background: #222; /* Dark background for content */
             padding: 30px;
@@ -91,16 +100,6 @@
             color: #ccc;
             line-height: 1.6;
         }
-        .section {
-            max-width: 900px;
-            background: #222;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            text-align: left;
-            color: #ccc;
-        }
         .section h3 {
             color: #ccc;
         }
@@ -112,6 +111,7 @@
 </head>
 <body>
     <div class="navbar">
+        <img src="https://via.placeholder.com/40" alt="Logo"> <!-- Temporary logo image -->
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -124,7 +124,7 @@
         </div>
         <div class="content">
             <div class="profile-image">
-                <img src="placeholder.jpg" alt="Kenneth Pinto">
+                <img src="https://via.placeholder.com/160" alt="Kenneth Pinto"> <!-- Temporary image for profile -->
             </div>
             <div class="description">
                 <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
