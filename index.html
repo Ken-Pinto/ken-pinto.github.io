@@ -6,107 +6,87 @@
     <title>Kenneth Pinto - Portfolio</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #111; /* Dark background */
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Full-screen hero section */
+        .hero {
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
             text-align: center;
-            background: #5a1f1f;
-            color: #fff;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
+        .hero h1 {
+            font-size: 4rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .hero a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            background-color: #7a2c2c;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .hero a:hover {
+            background-color: #5a1f1f;
+        }
+        /* Navbar */
         .navbar {
             position: fixed;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.3); /* Semi-transparent */
-            backdrop-filter: blur(10px); /* Glass blur effect */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 15px 30px;
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            font-size: 16px;
-            border-radius: 25px;
-            border: 2px solid #7a2c2c; /* Thin border outline */
+            gap: 20px;
+            z-index: 10;
         }
         .navbar a {
             text-decoration: none;
-            color: #5a1f1f;
+            color: #fff;
             font-weight: bold;
-            transition: color 0.3s ease;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px); /* Glass effect */
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
         .navbar a:hover {
-            color: #7a2c2c;
+            background: rgba(255, 255, 255, 0.5);
         }
-        .container {
-            max-width: 900px;
-            background: white;
-            padding: 30px;
-            margin-top: 100px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #333;
-            border: 2px solid #7a2c2c;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 28px;
-            color: #000;
-        }
-        h2 {
-            font-size: 18px;
-            color: #000;
-            margin-top: 10px;
-        }
-        .content {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            width: 100%;
-        }
-        .profile-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #7a2c2c;
-        }
-        .description {
-            flex: 2;
-            padding-left: 20px;
-        }
-        p {
-            font-size: 16px;
-            color: #444;
-            line-height: 1.6;
-        }
+        /* Sections */
         .section {
-            max-width: 700px;
-            background: white;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            text-align: left;
-            color: #333;
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #222;
         }
-        .section h3 {
-            color: #5a1f1f;
+        .section h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .section p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -116,35 +96,33 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
-    <div class="container" id="about">
-        <div class="header">
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
             <h1>Kenneth Pinto</h1>
-            <h2>Master of Digital Media Student</h2>
-        </div>
-        <div class="content">
-            <div class="profile-image">
-                <img src="placeholder.jpg" alt="Kenneth Pinto">
-            </div>
-            <div class="description">
-                <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
-            </div>
+            <p>Master of Digital Media Student</p>
+            <a href="#about">Learn More</a>
         </div>
     </div>
-    
+
+    <!-- About Section -->
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <p>Currently studying at Victoria University. My hobbies include playing the guitar, singing, watching movies, TV shows, anime, and K-drama.</p>
+    </div>
+
+    <!-- Projects Section -->
     <div class="section" id="projects">
-        <h3>Projects</h3>
+        <h2>My Projects</h2>
         <p>Here are some of my recent projects. Stay tuned for updates!</p>
     </div>
-    
-    <div class="section" id="skills">
-        <h3>Skills</h3>
-        <p>Proficient in digital media production, web design, and content creation.</p>
-    </div>
-    
+
+    <!-- Contact Section -->
     <div class="section" id="contact">
-        <h3>Contact</h3>
-        <p>Email: kenneth.pinto@example.com</p>
-        <p>LinkedIn: <a href="#" style="color:#5a1f1f; text-decoration: none;">linkedin.com/in/kennethpinto</a></p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kenneth.pinto@example.com" style="color: #7a2c2c; text-decoration: none;">kenneth.pinto@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kennethpinto" style="color: #7a2c2c; text-decoration: none;">linkedin.com/in/kennethpinto</a></p>
     </div>
 </body>
 </html>
